@@ -1,0 +1,43 @@
+services:
+  db:
+    image: postgres:14
+    container_name: cloud_db
+    restart: always
+    environment:
+      POSTGRES_DB: cloud
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cloud_app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cloud
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cloud_frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    environment:
+      - VUE_APP_BASE_URL=http://localhost:8081
+
+volumes:
+  pgdata:
