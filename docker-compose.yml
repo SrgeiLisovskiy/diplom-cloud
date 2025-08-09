@@ -4,13 +4,12 @@ services:
     container_name: cloud_db
     restart: always
     environment:
-      POSTGRES_DB: could
+      POSTGRES_DB: cloud
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: iamroot
     ports:
       - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+
 
   backend:
     build:
@@ -22,7 +21,7 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cloud
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: iamroot
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
