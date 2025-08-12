@@ -1,230 +1,336 @@
-2025-08-06T20:24:51.681016100Z
-2025-08-06T20:24:51.681078800Z   .   ____          _            __ _ _
-2025-08-06T20:24:51.681083100Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-2025-08-06T20:24:51.681085400Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-2025-08-06T20:24:51.681087500Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-2025-08-06T20:24:51.681089400Z   '  |____| .__|_| |_|_| |_\__, | / / / /
-2025-08-06T20:24:51.681091300Z  =========|_|==============|___/=/_/_/_/
-2025-08-06T20:24:51.681093200Z
-2025-08-06T20:24:51.681493000Z  :: Spring Boot ::                (v3.5.3)
-2025-08-06T20:24:51.681547200Z
-2025-08-06T20:24:51.743961200Z 2025-08-06T20:24:51.742Z  INFO 1 --- [backend] [           main] ru.netology.backend.BackendApplication   : Starting BackendApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/backend.jar started by root in /)
-2025-08-06T20:24:51.744922500Z 2025-08-06T20:24:51.744Z  INFO 1 --- [backend] [           main] ru.netology.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-08-06T20:24:52.370139600Z 2025-08-06T20:24:52.369Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-06T20:24:52.420875000Z 2025-08-06T20:24:52.420Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
-2025-08-06T20:24:52.892517200Z 2025-08-06T20:24:52.892Z  INFO 1 --- [backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-06T20:24:52.904353000Z 2025-08-06T20:24:52.903Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-06T20:24:52.904474300Z 2025-08-06T20:24:52.904Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-08-06T20:24:52.930483900Z 2025-08-06T20:24:52.929Z  INFO 1 --- [backend] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-06T20:24:52.931444600Z 2025-08-06T20:24:52.931Z  INFO 1 --- [backend] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1139 ms
-2025-08-06T20:24:52.998414800Z 2025-08-06T20:24:52.996Z  INFO 1 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-06T20:24:54.087954900Z 2025-08-06T20:24:54.087Z  INFO 1 --- [backend] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
-2025-08-06T20:24:54.087995000Z 2025-08-06T20:24:54.087Z  INFO 1 --- [backend] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
-2025-08-06T20:24:54.087999600Z 2025-08-06T20:24:54.087Z  INFO 1 --- [backend] [           main] o.f.c.internal.license.VersionPrinter    :
-2025-08-06T20:24:54.090650300Z 2025-08-06T20:24:54.090Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
-
-
-
-
-
-2025-08-06T20:24:54.090693800Z  ...
-2025-08-06T20:24:54.090742600Z 2025-08-06T20:24:54.090Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
-2025-08-06T20:24:54.090834800Z 2025-08-06T20:24:54.090Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
-
-
-
-
-
-2025-08-06T20:24:54.090906900Z  ...
-2025-08-06T20:24:54.091451500Z 2025-08-06T20:24:54.091Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: jar:nested:/backend.jar/!BOOT-INF/classes/!/db/migration
-2025-08-06T20:24:54.095042300Z 2025-08-06T20:24:54.094Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/
-2025-08-06T20:24:54.095089400Z 2025-08-06T20:24:54.094Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/schema.sql
-2025-08-06T20:24:54.095150300Z 2025-08-06T20:24:54.094Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
-2025-08-06T20:24:54.099092200Z 2025-08-06T20:24:54.098Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
-2025-08-06T20:24:54.099142900Z 2025-08-06T20:24:54.098Z DEBUG 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Validating schema.sql
-2025-08-06T20:24:54.099971600Z 2025-08-06T20:24:54.099Z  INFO 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
-2025-08-06T20:24:54.100003000Z 2025-08-06T20:24:54.099Z  INFO 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
-2025-08-06T20:24:54.101780200Z 2025-08-06T20:24:54.101Z  INFO 1 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-06T20:24:55.106833900Z 2025-08-06T20:24:55.106Z ERROR 1 --- [backend] [           main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter' defined in URL [jar:nested:/backend.jar/!BOOT-INF/classes/!/ru/netology/backend/configs/JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtTokenUtil' defined in URL [jar:nested:/backend.jar/!BOOT-INF/classes/!/ru/netology/backend/util/JwtTokenUtil.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtBlackListRepository' defined in ru.netology.backend.repository.JwtBlackListRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2025-08-06T20:24:55.132625000Z 2025-08-06T20:24:55.132Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-08-06T20:24:55.135848600Z 2025-08-06T20:24:55.135Z  WARN 1 --- [backend] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2025-08-06T20:24:55.143024600Z 2025-08-06T20:24:55.142Z  INFO 1 --- [backend] [           main] .s.b.a.l.ConditionEvaluationReportLogger :
-2025-08-06T20:24:55.143061400Z
-2025-08-06T20:24:55.143065000Z Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-08-06T20:24:55.161807000Z 2025-08-06T20:24:55.157Z ERROR 1 --- [backend] [           main] o.s.boot.SpringApplication               : Application run failed
-2025-08-06T20:24:55.161845900Z
-2025-08-06T20:24:55.161849700Z org.springframework.context.ApplicationContextException: Unable to start web server
-2025-08-06T20:24:55.161852600Z 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161855200Z 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161857600Z 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161860000Z 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161864500Z 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161866900Z 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161869200Z 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161882500Z 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161885100Z 	at ru.netology.backend.BackendApplication.main(BackendApplication.java:12) ~[!/:0.0.1-SNAPSHOT]
-2025-08-06T20:24:55.161887400Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-2025-08-06T20:24:55.161889700Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-2025-08-06T20:24:55.161892000Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-2025-08-06T20:24:55.161894300Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-2025-08-06T20:24:55.161896600Z 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[backend.jar:0.0.1-SNAPSHOT]
-2025-08-06T20:24:55.161900400Z 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[backend.jar:0.0.1-SNAPSHOT]
-2025-08-06T20:24:55.161902800Z 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[backend.jar:0.0.1-SNAPSHOT]
-2025-08-06T20:24:55.161905100Z Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2025-08-06T20:24:55.161907400Z 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161909800Z 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161912400Z 	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161914900Z 	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161917300Z 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161919700Z 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161922100Z 	... 15 common frames omitted
-2025-08-06T20:24:55.161925400Z Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter' defined in URL [jar:nested:/backend.jar/!BOOT-INF/classes/!/ru/netology/backend/configs/JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtTokenUtil' defined in URL [jar:nested:/backend.jar/!BOOT-INF/classes/!/ru/netology/backend/util/JwtTokenUtil.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtBlackListRepository' defined in ru.netology.backend.repository.JwtBlackListRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2025-08-06T20:24:55.161934300Z 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161937000Z 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161939500Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161941900Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161944300Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161946700Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161949100Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161951500Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161953900Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161956200Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.161958600Z 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161961000Z 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161963600Z 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161966100Z 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161968500Z 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161971100Z 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161973600Z 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161978900Z 	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.161981400Z 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.161991800Z 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.161994200Z 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.161996500Z 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.161998900Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-2025-08-06T20:24:55.162001200Z 	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162004600Z 	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-2025-08-06T20:24:55.162008000Z 	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162012100Z 	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162015700Z 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162018900Z 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162022900Z 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162027200Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-2025-08-06T20:24:55.162030400Z 	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162034800Z 	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-2025-08-06T20:24:55.162038200Z 	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162041300Z 	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162044200Z 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162047800Z 	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162051700Z 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162058700Z 	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162061100Z 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162063600Z 	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.42.jar!/:na]
-2025-08-06T20:24:55.162066000Z 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.162068400Z 	... 20 common frames omitted
-2025-08-06T20:24:55.162070900Z Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtTokenUtil' defined in URL [jar:nested:/backend.jar/!BOOT-INF/classes/!/ru/netology/backend/util/JwtTokenUtil.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtBlackListRepository' defined in ru.netology.backend.repository.JwtBlackListRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2025-08-06T20:24:55.162074100Z 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162076500Z 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162078900Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162081300Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162083700Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162086100Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162088500Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162090900Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162093300Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162095700Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162098100Z 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1683) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162103900Z 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162106500Z 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162108900Z 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162111200Z 	... 61 common frames omitted
-2025-08-06T20:24:55.162113500Z Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtBlackListRepository' defined in ru.netology.backend.repository.JwtBlackListRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2025-08-06T20:24:55.162116200Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162118600Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162121000Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1725) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162123400Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1474) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162125800Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162128200Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162131000Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162133400Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162135800Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162138200Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162140500Z 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1683) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162142900Z 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162148800Z 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162151300Z 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162153700Z 	... 74 common frames omitted
-2025-08-06T20:24:55.162155900Z Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
-2025-08-06T20:24:55.162158400Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162160700Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162163200Z 	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162165500Z 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162168100Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162170600Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162173000Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162175400Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162177800Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162180100Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162182600Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162184900Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162187300Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162192600Z 	... 87 common frames omitted
-2025-08-06T20:24:55.162195100Z Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-2025-08-06T20:24:55.162198100Z --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-2025-08-06T20:24:55.162200500Z SQL State  : 08001
-2025-08-06T20:24:55.162202700Z Error Code : 0
-2025-08-06T20:24:55.162204900Z Message    : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-2025-08-06T20:24:55.162207200Z
-2025-08-06T20:24:55.162209400Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162211800Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162214200Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162216600Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162219000Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162221300Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162223700Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162226100Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162228500Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162230800Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162233200Z 	... 99 common frames omitted
-2025-08-06T20:24:55.162235600Z Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-2025-08-06T20:24:55.162238200Z --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-2025-08-06T20:24:55.162243700Z SQL State  : 08001
-2025-08-06T20:24:55.162246000Z Error Code : 0
-2025-08-06T20:24:55.162248200Z Message    : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-2025-08-06T20:24:55.162250600Z
-2025-08-06T20:24:55.162252800Z 	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-9.22.3.jar!/:na]
-2025-08-06T20:24:55.162255100Z 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.22.3.jar!/:na]
-2025-08-06T20:24:55.162257500Z 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142) ~[flyway-core-9.22.3.jar!/:na]
-2025-08-06T20:24:55.162259800Z 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar!/:na]
-2025-08-06T20:24:55.162262100Z 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.5.3.jar!/:3.5.3]
-2025-08-06T20:24:55.162264600Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162267000Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.8.jar!/:6.2.8]
-2025-08-06T20:24:55.162269400Z 	... 108 common frames omitted
-2025-08-06T20:24:55.162271600Z Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-2025-08-06T20:24:55.162274000Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162276300Z 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162278700Z 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:277) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162281300Z 	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162283700Z 	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162286000Z 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:139) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162288300Z 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162290600Z 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162292900Z 	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162298000Z 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162300500Z 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:101) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162302800Z 	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.0.jar!/:na]
-2025-08-06T20:24:55.162305100Z 	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.22.3.jar!/:na]
-2025-08-06T20:24:55.162307500Z 	... 114 common frames omitted
-2025-08-06T20:24:55.162309700Z Caused by: java.net.ConnectException: Connection refused
-2025-08-06T20:24:55.162311900Z 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-2025-08-06T20:24:55.162314100Z 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
-2025-08-06T20:24:55.162316400Z 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
-2025-08-06T20:24:55.162318600Z 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
-2025-08-06T20:24:55.162320900Z 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
-2025-08-06T20:24:55.162323200Z 	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
-2025-08-06T20:24:55.162325400Z 	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162327700Z 	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162330100Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162332500Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.7.jar!/:42.7.7]
-2025-08-06T20:24:55.162334800Z 	... 126 common frames omitted
-2025-08-06T20:24:55.162337000Z
+cloud_frontend: /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+cloud_backend:
+cloud_frontend: /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+cloud_backend:   .   ____          _            __ _ _
+cloud_frontend: /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+cloud_backend:  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+cloud_db: The files belonging to this database system will be owned by user "postgres".
+cloud_backend: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+cloud_backend:  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+cloud_frontend: 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+cloud_backend:   '  |____| .__|_| |_|_| |_\__, | / / / /
+cloud_frontend: 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+cloud_db: This user must also own the server process.
+cloud_frontend: /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+cloud_db:
+cloud_frontend: /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+cloud_db: The database cluster will be initialized with locale "en_US.utf8".
+cloud_backend:  =========|_|==============|___/=/_/_/_/
+cloud_db: The default database encoding has accordingly been set to "UTF8".
+cloud_db: The default text search configuration will be set to "english".
+cloud_frontend: /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+cloud_db:
+cloud_db: Data page checksums are disabled.
+cloud_frontend: /docker-entrypoint.sh: Configuration complete; ready for start up
+cloud_db:
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: using the "epoll" event method
+cloud_backend:
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: nginx/1.28.0
+cloud_backend:  :: Spring Boot ::                (v3.5.3)
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0)
+cloud_backend:
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: OS: Linux 6.10.14-linuxkit
+cloud_backend: 2025-08-12T18:52:28.021Z  INFO 1 --- [backend] [           main] ru.netology.backend.BackendApplication   : Starting BackendApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/backend.jar started by root in /)
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+cloud_backend: 2025-08-12T18:52:28.025Z  INFO 1 --- [backend] [           main] ru.netology.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker processes
+cloud_backend: 2025-08-12T18:52:29.095Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 29
+cloud_backend: 2025-08-12T18:52:29.177Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 30
+cloud_backend: 2025-08-12T18:52:29.898Z  INFO 1 --- [backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 31
+cloud_backend: 2025-08-12T18:52:29.919Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 32
+cloud_backend: 2025-08-12T18:52:29.919Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 33
+cloud_backend: 2025-08-12T18:52:29.958Z  INFO 1 --- [backend] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 34
+cloud_backend: 2025-08-12T18:52:29.960Z  INFO 1 --- [backend] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1846 ms
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 35
+cloud_backend: 2025-08-12T18:52:30.071Z  INFO 1 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 36
+cloud_backend: 2025-08-12T18:52:30.366Z  INFO 1 --- [backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ac91282
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 37
+cloud_backend: 2025-08-12T18:52:30.368Z  INFO 1 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 38
+cloud_backend: 2025-08-12T18:52:30.461Z  INFO 1 --- [backend] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 39
+cloud_backend: 2025-08-12T18:52:30.461Z  INFO 1 --- [backend] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 40
+cloud_backend: 2025-08-12T18:52:30.461Z  INFO 1 --- [backend] [           main] o.f.c.internal.license.VersionPrinter    :
+cloud_db: fixing permissions on existing directory /var/lib/postgresql/data ... ok
+cloud_backend: 2025-08-12T18:52:30.465Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+cloud_backend: 2025-08-12T18:52:30.465Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader TomcatEmbeddedWebappClassLoader
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 41
+cloud_backend:   context: ROOT
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 42
+cloud_db: creating subdirectories ... ok
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 43
+cloud_db: selecting dynamic shared memory implementation ... posix
+cloud_frontend: 2025/08/12 18:52:26 [notice] 1#1: start worker process 44
+cloud_db: selecting default max_connections ... 100
+cloud_backend:   delegate: true
+cloud_db: selecting default shared_buffers ... 128MB
+cloud_db: selecting default time zone ... UTC
+cloud_backend: ----------> Parent Classloader:
+cloud_db: creating configuration files ... ok
+cloud_backend: org.springframework.boot.loader.launch.LaunchedClassLoader@2f92e0f4
+cloud_db: running bootstrap script ... ok
+cloud_backend:  ...
+cloud_db: sh: locale: not found
+cloud_db: 2025-08-12 18:52:26.790 UTC [35] WARNING:  no usable system locales were found
+cloud_backend: 2025-08-12T18:52:30.465Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+cloud_db: performing post-bootstrap initialization ... ok
+cloud_backend: 2025-08-12T18:52:30.466Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+cloud_db: syncing data to disk ... ok
+cloud_backend: 2025-08-12T18:52:30.466Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader TomcatEmbeddedWebappClassLoader
+cloud_db:
+cloud_backend:   context: ROOT
+cloud_db:
+cloud_backend:   delegate: true
+cloud_db: Success. You can now start the database server using:
+cloud_backend: ----------> Parent Classloader:
+cloud_db:
+cloud_backend: org.springframework.boot.loader.launch.LaunchedClassLoader@2f92e0f4
+cloud_db:     pg_ctl -D /var/lib/postgresql/data -l logfile start
+cloud_backend:  ...
+cloud_db:
+cloud_backend: 2025-08-12T18:52:30.466Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: jar:nested:/backend.jar/!BOOT-INF/classes/!/db/migration
+cloud_db: initdb: warning: enabling "trust" authentication for local connections
+cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/
+cloud_db: initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/schema.sql
+cloud_db: waiting for server to start....2025-08-12 18:52:27.569 UTC [41] LOG:  starting PostgreSQL 15.13 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+cloud_db: 2025-08-12 18:52:27.572 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+cloud_backend: 2025-08-12T18:52:30.477Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
+cloud_db: 2025-08-12 18:52:27.581 UTC [44] LOG:  database system was shut down at 2025-08-12 18:52:27 UTC
+cloud_backend: 2025-08-12T18:52:30.478Z DEBUG 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Validating schema.sql
+cloud_db: 2025-08-12 18:52:27.588 UTC [41] LOG:  database system is ready to accept connections
+cloud_backend: 2025-08-12T18:52:30.479Z  INFO 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+cloud_backend: 2025-08-12T18:52:30.479Z  INFO 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+cloud_db:  done
+cloud_backend: 2025-08-12T18:52:30.489Z  INFO 1 --- [backend] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://db:5432/cloud (PostgreSQL 15.13)
+cloud_db: server started
+cloud_backend: 2025-08-12T18:52:30.489Z DEBUG 1 --- [backend] [           main] org.flywaydb.core.FlywayExecutor         : Driver: PostgreSQL JDBC Driver 42.7.7
+cloud_db: CREATE DATABASE
+cloud_backend: 2025-08-12T18:52:30.489Z DEBUG 1 --- [backend] [           main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: true
+cloud_db:
+cloud_backend: 2025-08-12T18:52:30.491Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.SchemaHistoryFactory           : Schemas:
+cloud_db:
+cloud_backend: 2025-08-12T18:52:30.491Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+cloud_db: /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+cloud_backend: 2025-08-12T18:52:30.501Z DEBUG 1 --- [backend] [           main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+cloud_db:
+cloud_backend: 2025-08-12T18:52:30.502Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
+cloud_db: waiting for server to shut down....2025-08-12 18:52:27.724 UTC [41] LOG:  received fast shutdown request
+cloud_db: 2025-08-12 18:52:27.727 UTC [41] LOG:  aborting any active transactions
+cloud_db: 2025-08-12 18:52:27.729 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+cloud_db: 2025-08-12 18:52:27.730 UTC [42] LOG:  shutting down
+cloud_backend: 2025-08-12T18:52:30.513Z DEBUG 1 --- [backend] [           main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+cloud_db: 2025-08-12 18:52:27.732 UTC [42] LOG:  checkpoint starting: shutdown immediate
+cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/schema.sql (filename: schema.sql)
+cloud_db: 2025-08-12 18:52:27.841 UTC [42] LOG:  checkpoint complete: wrote 921 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.021 s, sync=0.080 s, total=0.111 s; sync files=301, longest=0.006 s, average=0.001 s; distance=4238 kB, estimate=4238 kB
+cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
+cloud_db: 2025-08-12 18:52:27.851 UTC [41] LOG:  database system is shut down
+cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/schema.sql (filename: schema.sql)
+cloud_db:  done
+cloud_backend: 2025-08-12T18:52:30.519Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
+cloud_db: server stopped
+cloud_backend: 2025-08-12T18:52:30.520Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/schema.sql (filename: schema.sql)
+cloud_db:
+cloud_backend: 2025-08-12T18:52:30.520Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
+cloud_db: PostgreSQL init process complete; ready for start up.
+cloud_backend: 2025-08-12T18:52:30.525Z  INFO 1 --- [backend] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+cloud_db:
+cloud_backend: 2025-08-12T18:52:30.528Z  INFO 1 --- [backend] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.013s)
+cloud_db: 2025-08-12 18:52:27.955 UTC [1] LOG:  starting PostgreSQL 15.13 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+cloud_backend: 2025-08-12T18:52:30.528Z  WARN 1 --- [backend] [           main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+cloud_db: 2025-08-12 18:52:27.955 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+cloud_backend: 2025-08-12T18:52:30.531Z DEBUG 1 --- [backend] [           main] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: "public"
+cloud_db: 2025-08-12 18:52:27.955 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+cloud_backend: 2025-08-12T18:52:30.545Z  INFO 1 --- [backend] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+cloud_db: 2025-08-12 18:52:27.963 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+cloud_backend: 2025-08-12T18:52:30.555Z DEBUG 1 --- [backend] [           main] o.flywaydb.core.internal.parser.Parser   : Parsing  ...
+cloud_db: 2025-08-12 18:52:27.970 UTC [57] LOG:  database system was shut down at 2025-08-12 18:52:27 UTC
+cloud_backend: 2025-08-12T18:52:30.564Z DEBUG 1 --- [backend] [           main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE "public"."flyway_schema_history" (
+cloud_db: 2025-08-12 18:52:27.977 UTC [1] LOG:  database system is ready to accept connections
+cloud_backend:     "installed_rank" INT NOT NULL,
+cloud_backend:     "version" VARCHAR(50),
+cloud_backend:     "description" VARCHAR(200) NOT NULL,
+cloud_backend:     "type" VARCHAR(20) NOT NULL,
+cloud_backend:     "script" VARCHAR(1000) NOT NULL,
+cloud_backend:     "checksum" INTEGER,
+cloud_backend:     "installed_by" VARCHAR(100) NOT NULL,
+cloud_backend:     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
+cloud_backend:     "execution_time" INTEGER NOT NULL,
+cloud_backend:     "success" BOOLEAN NOT NULL
+cloud_backend: )
+cloud_backend: 2025-08-12T18:52:30.565Z DEBUG 1 --- [backend] [           main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 13: ALTER TABLE "public"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+cloud_backend: 2025-08-12T18:52:30.565Z DEBUG 1 --- [backend] [           main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 14: CREATE INDEX "flyway_schema_history_s_idx" ON "public"."flyway_schema_history" ("success")
+cloud_backend: 2025-08-12T18:52:30.566Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE "public"."flyway_schema_history" (
+cloud_backend:     "installed_rank" INT NOT NULL,
+cloud_backend:     "version" VARCHAR(50),
+cloud_backend:     "description" VARCHAR(200) NOT NULL,
+cloud_backend:     "type" VARCHAR(20) NOT NULL,
+cloud_backend:     "script" VARCHAR(1000) NOT NULL,
+cloud_backend:     "checksum" INTEGER,
+cloud_backend:     "installed_by" VARCHAR(100) NOT NULL,
+cloud_backend:     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
+cloud_backend:     "execution_time" INTEGER NOT NULL,
+cloud_backend:     "success" BOOLEAN NOT NULL
+cloud_backend: )
+cloud_backend: 2025-08-12T18:52:30.576Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+cloud_backend: 2025-08-12T18:52:30.576Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE "public"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+cloud_backend: 2025-08-12T18:52:30.582Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+cloud_backend: 2025-08-12T18:52:30.583Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE INDEX "flyway_schema_history_s_idx" ON "public"."flyway_schema_history" ("success")
+cloud_backend: 2025-08-12T18:52:30.589Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
+cloud_backend: 2025-08-12T18:52:30.589cloud_backend: Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Created Schema History table "public"."flyway_schema_history"
+cloud_backend: 2025-08-12T18:52:30.603Z  INFO 1 --- [backend] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+cloud_backend: 2025-08-12T18:52:30.609Z  INFO 1 --- [backend] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+cloud_backend: 2025-08-12T18:52:30.613Z DEBUG 1 --- [backend] [           main] org.flywaydb.core.FlywayExecutor         : Memory usage: 28 of 53M
+cloud_backend: 2025-08-12T18:52:30.725Z  INFO 1 --- [backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+cloud_backend: 2025-08-12T18:52:30.814Z  INFO 1 --- [backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+cloud_backend: 2025-08-12T18:52:30.862Z  INFO 1 --- [backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+cloud_backend: 2025-08-12T18:52:31.293Z  INFO 1 --- [backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+cloud_backend: 2025-08-12T18:52:31.409Z  INFO 1 --- [backend] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+cloud_backend: 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+cloud_backend: 	Database driver: undefined/unknown
+cloud_backend: 	Database version: 15.13
+cloud_backend: 	Autocommit mode: undefined/unknown
+cloud_backend: 	Isolation level: undefined/unknown
+cloud_backend: 	Minimum pool size: undefined/unknown
+cloud_backend: 	Maximum pool size: undefined/unknown
+cloud_backend: 2025-08-12T18:52:32.197Z  INFO 1 --- [backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+cloud_backend: Hibernate: create table blacklist (id bigint generated by default as identity, token varchar(255) not null, primary key (id))
+cloud_backend: Hibernate: create table files (id bigint generated by default as identity, filename varchar(255) not null, size bigint not null, user_id bigint not null, primary key (id))
+cloud_backend: Hibernate: create table users (id bigint generated by default as identity, login varchar(255) not null, password varchar(255) not null, primary key (id))
+cloud_backend: Hibernate: alter table if exists blacklist drop constraint if exists UK1r6awwvh32owikk9swi2punxv
+cloud_backend: 2025-08-12T18:52:32.260Z  WARN 1 --- [backend] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+cloud_backend: 2025-08-12T18:52:32.260Z  WARN 1 --- [backend] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk1r6awwvh32owikk9swi2punxv" of relation "blacklist" does not exist, skipping
+cloud_backend: Hibernate: alter table if exists blacklist add constraint UK1r6awwvh32owikk9swi2punxv unique (token)
+cloud_backend: Hibernate: alter table if exists users drop constraint if exists UKow0gan20590jrb00upg3va2fn
+cloud_backend: 2025-08-12T18:52:32.272Z  WARN 1 --- [backend] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+cloud_backend: 2025-08-12T18:52:32.272Z  WARN 1 --- [backend] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "ukow0gan20590jrb00upg3va2fn" of relation "users" does not exist, skipping
+cloud_backend: Hibernate: alter table if exists users add constraint UKow0gan20590jrb00upg3va2fn unique (login)
+cloud_backend: Hibernate: alter table if exists files add constraint FKdgr5hx49828s5vhjo1s8q3wdp foreign key (user_id) references users
+cloud_backend: 2025-08-12T18:52:32.282Z  INFO 1 --- [backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+cloud_backend: 2025-08-12T18:52:32.667Z  INFO 1 --- [backend] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+cloud_backend: 2025-08-12T18:52:32.668Z  WARN 1 --- [backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+cloud_backend: 2025-08-12T18:52:32.729Z  WARN 1 --- [backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+cloud_backend: 2025-08-12T18:52:32.904Z DEBUG 1 --- [backend] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+cloud_backend: 2025-08-12T18:52:33.196Z  INFO 1 --- [backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+cloud_backend: 2025-08-12T18:52:33.207Z  INFO 1 --- [backend] [           main] ru.netology.backend.BackendApplication   : Started BackendApplication in 5.857 seconds (process running for 6.735)
+cloud_backend: 2025-08-12T18:52:34.453Z  INFO 1 --- [backend] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+cloud_backend: 2025-08-12T18:52:34.453Z  INFO 1 --- [backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+cloud_backend: 2025-08-12T18:52:34.455Z  INFO 1 --- [backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+cloud_backend: 2025-08-12T18:52:34.470Z DEBUG 1 --- [backend] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /login
+cloud_backend: 2025-08-12T18:52:34.499Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /login
+cloud_backend: 2025-08-12T18:52:34.504Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+cloud_backend: 2025-08-12T18:52:34.507Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /login
+cloud_backend: 2025-08-12T18:52:34.591Z  INFO 1 --- [backend] [nio-8080-exec-2] r.n.b.c.AuthorizationController          : Поптыка входа пользователя:AuthRequest(login=mail@mail.com, password=password)
+cloud_backend: 2025-08-12T18:52:34.592Z  INFO 1 --- [backend] [nio-8080-exec-2] r.n.b.service.AuthorizationService       : Выполнен запрос POST/cloud/login: AuthRequest(login=mail@mail.com, password=password)
+cloud_backend: Hibernate: select u1_0.id,u1_0.login,u1_0.password from users u1_0 where u1_0.login=?
+cloud_backend: 2025-08-12T18:52:34.870Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'mail@mail.com'
+cloud_backend: 2025-08-12T18:52:34.871Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.s.authentication.ProviderManager     : Authentication failed with provider DaoAuthenticationProvider since Bad credentials
+cloud_backend: 2025-08-12T18:52:34.880Z ERROR 1 --- [backend] [nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Could not resolve view with ncloud_backend: ame 'login' in servlet with name 'dispatcherServlet'] with root cause
+cloud_backend:
+cloud_backend: jakarta.servlet.ServletException: Could not resolve view with name 'login' in servlet with name 'dispatcherServlet'
+cloud_backend: 	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1412) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at ru.netology.backend.configs.JwtFilter.doFilterInternal(JwtFilter.java:39) ~[!/:0.0.1-SNAPSHOT]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.securcloud_backend: ity.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.1.jar!/:6.5.1]
+cloud_backend: 	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar!/:6.2.8]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar!/:na]
+cloud_backend: 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+cloud_backend:
+cloud_backend: 2025-08-12T18:52:34.891Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+cloud_backend: 2025-08-12T18:52:34.892Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+cloud_backend: 2025-08-12T18:52:34.893Z DEBUG 1 --- [backend] [nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
