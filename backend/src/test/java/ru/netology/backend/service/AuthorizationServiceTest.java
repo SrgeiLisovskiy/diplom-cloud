@@ -4,13 +4,19 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import ru.netology.backend.dto.AuthRequest;
+import ru.netology.backend.dto.AuthToken;
+import ru.netology.backend.exceptions.NotFoundException;
 import ru.netology.backend.exceptions.UnauthorizedException;
 import ru.netology.backend.model.User;
 import ru.netology.backend.repository.UserRepository;
@@ -47,7 +53,7 @@ class AuthorizationServiceTest {
         user.setPassword(password);
 
 
-        when(userRepository.findUserByLogin(login)).thenReturn(Optional.of(user));
+        when(userRepository.findByLogin(login)).thenReturn(Optional.of(user));
         UserDetails userDetails = userService.loadUserByUsername(login);
         when(jwtTokenUtil.generateToken(userDetails)).thenReturn("token");
 
@@ -55,22 +61,23 @@ class AuthorizationServiceTest {
 
         authorizationService = new AuthorizationService(userService, jwtTokenUtil, authenticationManager);
 
-        String token = authorizationService.getToken(new AuthRequest(login, "test"));
+        ResponseEntity<?> authResponse = authorizationService.getToken(new AuthRequest(login, "test"));
+        AuthToken authToken =  (AuthToken) authResponse.getBody();
 
-        assertEquals("token", token);
+        assertEquals("token", authToken.getToken());
 
     }
 
     @Test
     void testLoginBadCredentials() {
         String login = "test";
-        when(userRepository.findUserByLogin(login)).thenReturn(Optional.empty());
+        when(userRepository.findByLogin(login)).thenReturn(Optional.empty());
 
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login, "test"));
 
         authorizationService = new AuthorizationService(userService, jwtTokenUtil, authenticationManager);
 
-        assertThrows(RuntimeException.class, () -> authorizationService.getToken(new AuthRequest(login, "test")));
+        assertEquals(HttpStatus.UNAUTHORIZED, authorizationService.getToken(new AuthRequest(login, "test")).getStatusCode());
 
     }
 

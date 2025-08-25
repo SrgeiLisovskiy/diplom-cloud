@@ -6,6 +6,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -14,23 +15,19 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import ru.netology.backend.exceptions.UnauthorizedException;
-import ru.netology.backend.service.CustomUserDetailsService;
+import ru.netology.backend.service.UserService;
 import ru.netology.backend.util.JwtTokenUtil;
 
 import java.io.IOException;
 
 @Component
 @Slf4j
+@RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtTokenUtil jwtTokenUtil;
 
-    private final CustomUserDetailsService detailsService;
-
-    public JwtFilter(JwtTokenUtil jwtTokenUtil, CustomUserDetailsService detailsService) {
-        this.jwtTokenUtil = jwtTokenUtil;
-        this.detailsService = detailsService;
-    }
+    private final UserService userService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -57,7 +54,7 @@ public class JwtFilter extends OncePerRequestFilter {
             }
         }
         if (login != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            UserDetails userDetails = detailsService.loadUserByUsername(login);
+            UserDetails userDetails = userService.loadUserByUsername(login);
 
             UsernamePasswordAuthenticationToken token =
                     new UsernamePasswordAuthenticationToken(

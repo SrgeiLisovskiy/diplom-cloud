@@ -100,13 +100,13 @@ cloud_backend: 2025-08-12T18:52:30.466Z DEBUG 1 --- [backend] [           main] 
 cloud_db: initdb: warning: enabling "trust" authentication for local connections
 cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/
 cloud_db: initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/schema.sql
+cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__init.sql
 cloud_db: waiting for server to start....2025-08-12 18:52:27.569 UTC [41] LOG:  starting PostgreSQL 15.13 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
 cloud_backend: 2025-08-12T18:52:30.471Z DEBUG 1 --- [backend] [           main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
 cloud_db: 2025-08-12 18:52:27.572 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
 cloud_backend: 2025-08-12T18:52:30.477Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
 cloud_db: 2025-08-12 18:52:27.581 UTC [44] LOG:  database system was shut down at 2025-08-12 18:52:27 UTC
-cloud_backend: 2025-08-12T18:52:30.478Z DEBUG 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Validating schema.sql
+cloud_backend: 2025-08-12T18:52:30.478Z DEBUG 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Validating V1__init.sql
 cloud_db: 2025-08-12 18:52:27.588 UTC [41] LOG:  database system is ready to accept connections
 cloud_backend: 2025-08-12T18:52:30.479Z  INFO 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : 1 SQL migrations were detected but not run because they did not follow the filename convention.
 cloud_backend: 2025-08-12T18:52:30.479Z  INFO 1 --- [backend] [           main] o.f.c.i.resource.ResourceNameValidator   : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
@@ -130,15 +130,15 @@ cloud_db: 2025-08-12 18:52:27.729 UTC [41] LOG:  background worker "logical repl
 cloud_db: 2025-08-12 18:52:27.730 UTC [42] LOG:  shutting down
 cloud_backend: 2025-08-12T18:52:30.513Z DEBUG 1 --- [backend] [           main] o.f.core.internal.command.DbValidate     : Validating migrations ...
 cloud_db: 2025-08-12 18:52:27.732 UTC [42] LOG:  checkpoint starting: shutdown immediate
-cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/schema.sql (filename: schema.sql)
+cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__init.sql (filename: V1__init.sql)
 cloud_db: 2025-08-12 18:52:27.841 UTC [42] LOG:  checkpoint complete: wrote 921 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.021 s, sync=0.080 s, total=0.111 s; sync files=301, longest=0.006 s, average=0.001 s; distance=4238 kB, estimate=4238 kB
 cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
 cloud_db: 2025-08-12 18:52:27.851 UTC [41] LOG:  database system is shut down
-cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/schema.sql (filename: schema.sql)
+cloud_backend: 2025-08-12T18:52:30.518Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__init.sql (filename: V1__init.sql)
 cloud_db:  done
 cloud_backend: 2025-08-12T18:52:30.519Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
 cloud_db: server stopped
-cloud_backend: 2025-08-12T18:52:30.520Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/schema.sql (filename: schema.sql)
+cloud_backend: 2025-08-12T18:52:30.520Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__init.sql (filename: V1__init.sql)
 cloud_db:
 cloud_backend: 2025-08-12T18:52:30.520Z DEBUG 1 --- [backend] [           main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/ (filename: )
 cloud_db: PostgreSQL init process complete; ready for start up.

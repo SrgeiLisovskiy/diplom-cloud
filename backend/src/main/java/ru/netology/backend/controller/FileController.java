@@ -82,6 +82,6 @@ public class FileController {
 
     private User getUserByToken(String token) throws UnauthorizedException {
         String login = jwtTokenUtil.getLogin(token);
-        return userRepository.findUserByLogin(login).orElseThrow();
+        return userRepository.findByLogin(login).orElseThrow();
     }
 }

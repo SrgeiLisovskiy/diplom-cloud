@@ -21,13 +21,13 @@ public class UserService implements UserDetailsService {
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        User user = userRepository.findUserByLogin(login)
+        User user = userRepository.findByLogin(login)
                 .orElseThrow(() -> new UsernameNotFoundException(String.format("Пользователь '%s' не найден", login)));
         log.info("Найден пользователь с login: {}", login);
 
         UserBuilder userBuilder = org.springframework.security.core.userdetails.User.withUsername(user.getLogin());
         userBuilder.password(user.getPassword());
-
+        userBuilder.roles("USER");
         return userBuilder.build();
     }
 }

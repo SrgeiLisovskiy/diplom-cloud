@@ -28,6 +28,7 @@ public class JwtTokenUtil {
 
     private final JwtBlackListRepository jwtBlackListRepository;
 
+
     public String generateToken(UserDetails userDetails) {
         Date issuedDate = new Date();
         Date expirationDate = new Date(issuedDate.getTime() + lifeTime.toMillis());

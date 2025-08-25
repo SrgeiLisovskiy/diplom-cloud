@@ -1,7 +1,6 @@
 services:
   db:
     image: postgres:15-alpine
-    container_name: cloud_db
     restart: always
     environment:
       POSTGRES_DB: cloud
@@ -9,13 +8,14 @@ services:
       POSTGRES_PASSWORD: iamroot
     ports:
       - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: cloud_backend
     ports:
       - "8080:8080"
     depends_on:
@@ -30,10 +30,11 @@ services:
     build:
       context: ./netology-diplom-frontend
       dockerfile: Dockerfile
-    container_name: cloud_frontend
     ports:
       - "8081:80"
     depends_on:
       - backend
     environment:
-      - VUE_APP_BASE_URL=http://localhost:8080
+      - VUE_APP_BASE_URL=http://http://localhost:8080
+volumes:
+  pgdata:
