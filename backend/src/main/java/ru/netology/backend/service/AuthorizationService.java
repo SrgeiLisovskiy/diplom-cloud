@@ -42,7 +42,7 @@ public class AuthorizationService {
 
         } catch (BadCredentialsException e) {
             log.warn("Неверные учетные данные для пользователя: {}", authRequest.getLogin());
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(Map.of("message", "Invalid credentials"));
         } catch (AuthenticationException e) {
             log.warn("Ошибка аутентификации для пользователя {}: {}", authRequest.getLogin(), e.getMessage());

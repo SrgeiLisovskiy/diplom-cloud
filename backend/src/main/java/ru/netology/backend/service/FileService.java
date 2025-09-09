@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+import ru.netology.backend.exceptions.NotFoundException;
 import ru.netology.backend.exceptions.UnauthorizedException;
 import ru.netology.backend.model.FileSaved;
 import ru.netology.backend.model.User;
@@ -32,7 +33,7 @@ public class FileService {
     private String uploadDir;
 
     @Transactional
-    public void uploadFile(User user, String fileName, MultipartFile file) throws UnauthorizedException {
+    public void uploadFile(User user, String fileName, MultipartFile file)  {
         Path path = Paths.get(uploadDir, fileName);
         try {
             Files.createDirectories(path.getParent());
@@ -40,7 +41,7 @@ public class FileService {
             log.debug("Файл успешно сохранен: {}", fileName);
         } catch (IOException e) {
             log.debug("Ошибка сохранение файла: {}", fileName);
-            throw new RuntimeException(e);
+            throw new NotFoundException("Ошибка сохранение файла: " + fileName);
         }
 
         FileSaved fileSaved = new FileSaved();
@@ -50,29 +51,29 @@ public class FileService {
         fileRepository.save(fileSaved);
     }
 
-    public FileSaved getFile(User user, String filename) throws UnauthorizedException {
+    public FileSaved getFile(User user, String filename)  {
         return fileRepository.findByUserAndFilename(user, filename).orElse(null);
     }
 
-    public List<FileSaved> getFiles(User user, Integer limit) throws UnauthorizedException {
+    public List<FileSaved> getFiles(User user, Integer limit) {
         List<FileSaved> listFiles = fileRepository.findAllByUser(user);
         return limit == null ? listFiles : listFiles.stream().limit(limit).collect(Collectors.toList());
     }
 
     @Transactional
-    public void deleteFile(User user, String filename) throws UnauthorizedException {
+    public void deleteFile(User user, String filename) {
         fileRepository.deleteByFilenameAndUser(filename, user);
         Path path = Paths.get(uploadDir, filename);
         try {
             Files.deleteIfExists(path);
         } catch (IOException e) {
             log.debug("Ошибка удаления файла: {}", filename);
-            throw new RuntimeException(e);
+            throw new NotFoundException("Ошибка удаления файла: " + e );
         }
     }
 
     @Transactional
-    public void renameFile(User user, String filename, Map<String, String> body) throws IOException, UnauthorizedException {
+    public void renameFile(User user, String filename, Map<String, String> body) throws IOException {
         String newName = body.get("filename");
 
         Path oldPath = Paths.get(uploadDir, filename);

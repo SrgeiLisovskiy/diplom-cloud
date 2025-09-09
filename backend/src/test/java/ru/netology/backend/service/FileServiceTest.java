@@ -11,7 +11,6 @@ import ru.netology.backend.exceptions.UnauthorizedException;
 import ru.netology.backend.model.FileSaved;
 import ru.netology.backend.model.User;
 import ru.netology.backend.repository.FileRepository;
-import ru.netology.backend.repository.UserRepository;
 import ru.netology.backend.util.JwtTokenUtil;
 
 import java.io.IOException;
@@ -29,8 +28,6 @@ class FileServiceTest {
     @Mock
     private FileRepository fileRepository;
 
-    @Mock
-    private JwtTokenUtil jwtTokenUtil;
     @InjectMocks
     private FileService fileService;
     @TempDir
@@ -53,7 +50,7 @@ class FileServiceTest {
 
 
     @Test
-    void testUploadFile() throws UnauthorizedException {
+    void testUploadFile() {
         MockMultipartFile file =
                 new MockMultipartFile("file", "test.txt", "text/plain", "Hello".getBytes());
         fileService.uploadFile(user, "test.txt", file);
@@ -71,14 +68,14 @@ class FileServiceTest {
     }
 
     @Test
-    void testGetFiles() throws UnauthorizedException {
+    void testGetFiles()  {
         when(fileRepository.findAllByUser(user)).thenReturn(List.of(new FileSaved()));
         List<FileSaved> result = fileService.getFiles(user, 1);
         assertEquals(1, result.size());
     }
 
     @Test
-    void testDeleteFile() throws IOException, UnauthorizedException {
+    void testDeleteFile() throws IOException{
         Path filePath = tempDir.resolve("test.txt");
         Files.write(filePath, "testText".getBytes());
 
